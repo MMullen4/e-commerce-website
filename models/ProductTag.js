@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
 
-ProductTag.init(
+ProductTag.init(  // pivot table to create "many to many" relationship
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,13 +14,17 @@ ProductTag.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
-      model: 'Product',
-      key: 'id,'
+      references: {
+        model: 'product',
+        key: 'id,',
+      },
     },
     tag_id: {
       type: DataTypes.INTEGER,
-      model: 'Tag',
-      key: 'id',
+      references: {
+        model: 'tag',
+        key: 'id',
+      },
     },
   },
   {

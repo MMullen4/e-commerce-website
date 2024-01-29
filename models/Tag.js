@@ -8,11 +8,11 @@ Tag.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'Tag',
-        key: 'id',
-      },
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
+    tag_name: {type:DataTypes.STRING},
 },
   {
     sequelize,
