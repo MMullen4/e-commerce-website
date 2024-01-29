@@ -1,7 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection');
-
 class ProductTag extends Model {}
 
 ProductTag.init(  // pivot table to create "many to many" relationship
