@@ -3,8 +3,9 @@ Description
 The application is called E-Commerce website. The program employs an Express JS API to use Sequelize to interact with a MySQL database.
 
 ## Visuals
-https://app.screencastify.com/v3/watch/8VWJ7q2cctbH3bNuRtVw
+https://app.screencastify.com/v3/watch/o0tz3jpw7j1VtZk537Iy
 
+![Alt text](<Screenshot 2024-01-29 at 10.58.30 PM.png>)
 
 
 ## Installation
