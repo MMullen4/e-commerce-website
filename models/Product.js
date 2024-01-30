@@ -35,6 +35,7 @@ Product.init( // sets up fields and rules for Product model
     },
     category_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         model: 'category',
         key: 'id',

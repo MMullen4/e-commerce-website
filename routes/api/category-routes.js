@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { Category, Product, Tag } = require('../../models');
 
 // The `/api/categories` endpoint
 
@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
     const category_data = await Category.findByPk(req.params.id,  // finds product id and include assoc prods
       {
         include: [{
-          model: Product
+          model: Product,
         }]
       })
     if (!category_data) {
@@ -81,7 +81,7 @@ router.delete('/:id', async(req, res) => {
         message: `Unable to find category by id`
       })
     }
-    res.status(200).json(deleteCategory)  // send deleted category to fron-end
+    res.status(200).json(deleteCategory)  // send deleted category to front-end
   }
   catch (error) {
     res.status(500).json(error)
